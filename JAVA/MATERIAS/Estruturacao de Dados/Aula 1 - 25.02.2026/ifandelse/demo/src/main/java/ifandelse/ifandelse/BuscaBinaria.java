@@ -1,4 +1,5 @@
-package  main.java.ifandelse;
+package ifandelse;
+
 
 import java.util.Scanner;
 
@@ -21,7 +22,9 @@ public class BuscaBinaria {
             if(n == v[meio]) {
                 achou = true;
                 break;
-            }else{
+            } else if (n > v[meio]) {
+                inicio = meio + 1;
+            } else {
                 fim = meio - 1;
             }
         }
