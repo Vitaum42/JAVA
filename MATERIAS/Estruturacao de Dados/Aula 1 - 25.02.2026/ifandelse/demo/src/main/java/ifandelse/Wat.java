@@ -9,6 +9,19 @@ public class Wat {
         int inicio = 0;
         int fim = v.length - 1;
 
+        System.out.println("Digite um numero para procurar: ");
+        int n = sc.nextInt();
+
+        // JAVA é uma linguagem FORTEMENTE tipada // 
+        for(int i = 0; i < v.length; i++) {
+            if(n == v[i]){
+                System.out.println("ACHEI O NUMERO ");
+                System.out.println("Demorei " + i + " tentativas para encontrar");
+                break;
+            }
+        }
+        System.out.println();
+
         while(inicio <= fim) {
             int temp = v[inicio];
             v[inicio] = v[fim];
@@ -17,5 +30,7 @@ public class Wat {
             fim--;
             System.out.println(temp);
         }
+
+        
     }
 }
